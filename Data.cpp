@@ -1,6 +1,7 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Data.h"
 #include<string>
+#include <iomanip>
 #include<iostream>
 using namespace std;
 //CONSTANS	DE	CLASSE	
@@ -20,7 +21,7 @@ Data::Data() {
 void Data::mostrar(int format) const {
 	//Pre:	format	1	o	2;	Post:	mostra	la	data	actual	en	format	d/m/a	o	d–mes–a
 	if (format == 1)
-		cout << d_dia << "/" << d_mes << "/" << d_any << endl;
+		cout << setw(2) << setfill('0') << d_dia << "/" <<setw(2)<<setfill('0')<< d_mes << "/" <<setw(4) << setfill('0')<< d_any << endl;
 	else cout << d_dia << "-" << NOM_MES[d_mes] << "-" << d_any << endl;//	es	pot	usar	NOM_MES[mes]	i	no	un	condicional	múlZple	
 }
 
@@ -36,6 +37,24 @@ bool Data::esMenor(Data d) const {
 		}
 	}
 	return menor;
+}
+
+bool Data::esIgual(Data d) const {
+	//Pre:--;	
+	//Post:	cert	si	d	és	una	data	posterior	a	l’actual,	fals	altrament
+	bool igual = false;
+	bool menor = false;
+	menor = d.getAny() > d_any;
+	if (d.getAny() == d_any) {
+		menor = d.getMes() > d_mes;
+		if (d.getMes() == d_mes) {
+			menor = d.getDia() > d_dia;
+			if (d.getDia() == d_dia) {
+				igual = true;
+			}
+		}
+	}
+	return igual;
 }
 
 //	MODIFICADORES	

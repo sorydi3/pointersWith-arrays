@@ -1,3 +1,5 @@
 ﻿  PointerArrays.cpp
-  PointerArrays.vcxproj -> c:\users\sam\source\repos\PointerArrays\Debug\PointerArrays.exe
-  PointerArrays.vcxproj -> c:\users\sam\source\repos\PointerArrays\Debug\PointerArrays.pdb (Partial PDB)
+c:\users\sam\source\repos\pointerarrays\pointerarrays\pointerarrays.cpp(142): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Data.cpp
+c:\users\sam\source\repos\pointerarrays\pointerarrays\data.cpp(131): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Generating Code...

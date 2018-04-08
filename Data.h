@@ -14,6 +14,7 @@ public:
 	//Pre:	format	1	o	2;	Post:	mostra	la	data	actual	en	format	d/m/a	o	d–mes–a
 	bool esMenor(Data d) const;
 	//Pre:--;	Post:	cert	si	d	és	una	data	posterior	a	l’actual,	fals	altrament
+	bool esIgual(Data d) const;
 	//	MODIFICADORS	
 	void llegir(int format);
 	//Pre:	format	1	o	2;	Post:	llegeix	dates	en	format	AAAAMMDD		o	d	m	a,	fins	a	llegir-ne	una	de	correcte
